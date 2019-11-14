@@ -1,6 +1,6 @@
 # Angular NASA API
 
-* App using Angular 8, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started).
+* App using Angular 8, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started). Uses Angular Material Card to display image with buttons and credit text below. 
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -33,6 +33,8 @@
 
 * [RxJS Library v6.4.2](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
 
+* [Angular Material v8.2.0](https://material.angular.io/)
+
 ## Setup
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app does automatically reload if you change any of the source files.
@@ -61,11 +63,13 @@ getNasaImage(): Observable<string> {
 
 * Status: Working.
 
-* To-Do: Add Angular Material cards to display API data better. Fix errors. Add functionality.
+* To-Do: Add functionality.
 
 ## Inspiration
 
 * NASA :-)
+
+* Mercury :-)
 
 ## Contact
 

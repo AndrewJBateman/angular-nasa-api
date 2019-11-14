@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NasaService } from '../services/nasa.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  title = 'ngNasaApi';
 
-  constructor() { }
+  public nasaImgObj = '';
+
+  constructor(private nasaApi: NasaService) { }
 
   ngOnInit() {
+    this.nasaApi.getNasaImage().subscribe(response => {
+      this.nasaImgObj = response;
+      console.log(response);
+    });
   }
 
 }

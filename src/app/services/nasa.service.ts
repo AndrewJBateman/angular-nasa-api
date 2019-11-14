@@ -13,7 +13,7 @@ export class NasaService {
 		const year = new Date().getFullYear();
 		const month = new Date().getMonth() + 1;
 		const day = new Date().getDate();
-		const apiKey = 'APIKEY';
+		const apiKey = '';
 		const apodUrl = `https://api.nasa.gov/planetary/apod?date=${year}-${month}-${day}&api_key=${apiKey}&hd=true`;
 		return this.http.get<string>(apodUrl);
 	}
