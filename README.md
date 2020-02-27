@@ -1,6 +1,6 @@
 # Angular NASA API
 
-* App using Angular 8, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started). Uses Angular Material Card to display image with buttons and credit text below. 
+* App using Angular 9, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started). Uses Angular Material Card to display image with buttons and credit text below. 
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
