@@ -18,7 +18,6 @@
 ## General info
 
 * The NASA Picture of the Day is displayed.
-
 * [NASA apod API github repo](https://github.com/nasa/apod-api)
 
 ## Screenshots
@@ -27,17 +26,13 @@
 
 ## Technologies
 
-* [Angular v8.0.0](https://angular.io/)
-
-* [Angular CLI v8.0.1](https://cli.angular.io/).
-
-* [RxJS Library v6.4.2](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
-
-* [Angular Material v8.2.0](https://material.angular.io/)
+* [Angular v9.1.0](https://angular.io/)
+* [RxJS Library v6.5.3](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
+* [Angular Material v9.0.0](https://material.angular.io/)
 
 ## Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app does automatically reload if you change any of the source files.
+Install dependencies with `npm i` then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app does automatically reload if you change any of the source files.
 
 ## Code Examples
 
@@ -61,7 +56,7 @@ getNasaImage(): Observable<string> {
 
 ## Status & To-Do List
 
-* Status: Working.
+* Status: Working. Required NASA API key.
 
 * To-Do: Add functionality.
 
