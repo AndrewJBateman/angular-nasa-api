@@ -1,11 +1,11 @@
-<div class="main-div">
+<div class="main-div" *ngIf="nasaImgObj">
   <mat-card class="nasa-card">
     <mat-card-header>
       <div mat-card-avatar class="header-image" alt="NASA logo"></div>
       <mat-card-title>{{ nasaImgObj.title }}</mat-card-title>
       <mat-card-subtitle>{{ nasaImgObj.date | date }}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="nasaImgObj.hdurl" [alt]="">
+    <img mat-card-image [src]="nasaImgObj.hdurl" [alt]="" />
     <mat-card-content>
       <p>{{ nasaImgObj.explanation }}</p>
     </mat-card-content>
@@ -13,8 +13,10 @@
       <button mat-raised-button color="primary">LIKE</button>
       <button mat-raised-button color="success">SHARE</button>
       <div fxFlex></div>
-      <p class="credit-para"><mat-icon color="accent">photo_camera</mat-icon>{{nasaImgObj.copyright}}</p>
+      <p class="credit-para">
+        <mat-icon color="accent">photo_camera</mat-icon
+        >{{ nasaImgObj.copyright }}
+      </p>
     </mat-card-actions>
   </mat-card>
 </div>
-

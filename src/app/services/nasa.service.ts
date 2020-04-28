@@ -1,20 +1,25 @@
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { HttpClient, HttpResponse } from "@angular/common/http";
+
+import { Apod } from '../models/apod';
+import { environment } from "../../environments/environment";
 
 @Injectable({
-	providedIn: 'root'
+  providedIn: "root",
 })
 export class NasaService {
+  apiKey: string = "";
 
-	constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-	public getNasaImage(): Observable<string> {
-		const year = new Date().getFullYear();
-		const month = new Date().getMonth() + 1;
-		const day = new Date().getDate();
-		const apiKey = '';
-		const apodUrl = `https://api.nasa.gov/planetary/apod?date=${year}-${month}-${day}&api_key=${apiKey}&hd=true`;
-		return this.http.get<string>(apodUrl);
-	}
+  public getNasaImage(): Observable<Apod> {
+    const year = new Date().getFullYear();
+    const month = new Date().getMonth() + 1;
+    const day = new Date().getDate();
+    this.apiKey = environment.NASA_KEY;
+    const apodUrl = `https://api.nasa.gov/planetary/apod?date=${year}-${month}-${day}&api_key=${this.apiKey}&hd=true`;
+		return this.http
+			.get<Apod>(apodUrl);
+  }
 }
