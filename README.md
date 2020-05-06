@@ -1,6 +1,6 @@
 # :zap: Angular NASA API
 
-* App using Angular 9, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started). Uses Angular Material Card to display image with buttons and credit text below.
+* App using Angular 9, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started). Uses Angular Material Card to display image with buttons and credit text below. App to be deployed to Google Cloud Run using a Docker image (in progress).
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -11,7 +11,8 @@
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
   * [:signal_strength: Technologies](#signalstrength-technologies)
-  * [:floppy_disk: Setup](#floppydisk-setup)
+  * [:floppy_disk: App Setup](#floppydisk-app-setup)
+  * [:floppy_disk: Docker Setup](#floppydisk-docker-setup)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
@@ -33,11 +34,15 @@
 * [RxJS Library v6](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
 * [Angular Material v9](https://material.angular.io/)
 
-## :floppy_disk: Setup
+## :floppy_disk: App Setup
 
 * Install dependencies with `npm i`
 * Get yourself a [NASA API key](https://api.nasa.gov/index.html#getting-started) from Nasa and add it to your environment config files
 * Run `ng serve` for a dev server and navigate to `http://localhost:4200/`. The app does automatically reload if you change any of the source files
+
+## :floppy_disk: Docker Setup
+
+* For Docker to be able to be used on Windows 10 Home I had to install an Oracle VirtualBox virtual machine
 
 ## :computer: Code Examples
 
@@ -68,6 +73,8 @@ getNasaImage(): Observable<string> {
 
 * NASA :-)
 * Mercury :-)
+* [How to run Docker on Windows 10 Home edition](https://www.freecodecamp.org/news/how-to-run-docker-on-windows-10-home-edition/)
+* [Docker for windows 10 home](https://www.youtube.com/watch?v=Gtid21ZOqpM)
 
 ## :envelope: Contact
 
