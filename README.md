@@ -1,18 +1,18 @@
 # :zap: Angular NASA API
 
-* App using Angular 9, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started). Uses Angular Material Card to display image with buttons and credit text below. App to be deployed to Google Cloud Run using a Docker image (in progress).
+* App using Angular 10, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started). Uses Angular Material Card to display image with buttons and credit text below. App to be deployed to Google Cloud Run using a Docker image (in progress).
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
 ## :page_facing_up: Table of contents
 
 * [:zap: Angular NASA API](#zap-angular-nasa-api)
-  * [:page_facing_up: Table of contents](#pagefacingup-table-of-contents)
+  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies](#signalstrength-technologies)
-  * [:floppy_disk: App Setup](#floppydisk-app-setup)
-  * [:floppy_disk: Docker Setup](#floppydisk-docker-setup)
+  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:floppy_disk: App Setup](#floppy_disk-app-setup)
+  * [:floppy_disk: Docker Setup](#floppy_disk-docker-setup)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
@@ -27,12 +27,13 @@
 ## :camera: Screenshots
 
 ![Example screenshot](./img/pod.png).
+![Example screenshot](./img/saturn.png).
 
 ## :signal_strength: Technologies
 
-* [Angular v9](https://angular.io/)
+* [Angular v10](https://angular.io/)
 * [RxJS Library v6](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
-* [Angular Material v9](https://material.angular.io/)
+* [Angular Material v10](https://material.angular.io/)
 
 ## :floppy_disk: App Setup
 
@@ -66,8 +67,8 @@ getNasaImage(): Observable<string> {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working. All dependencies updated
-* To-Do: Add functionality.
+* Status: Working and deployed to Github. Docker virtual environment not working on Windows Home. All dependencies updated
+* To-Do: Revisit Docker
 
 ## :clap: Inspiration
 
