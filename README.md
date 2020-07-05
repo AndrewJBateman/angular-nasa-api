@@ -1,6 +1,6 @@
 # :zap: Angular NASA API
 
-* App using Angular 10, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started). Uses Angular Material Card to display image with buttons and credit text below. App to be deployed to Google Cloud Run using a Docker image (in progress).
+* App using Angular 10, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started). Uses Angular Material Card to display image with buttons and credit text below.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -67,8 +67,8 @@ getNasaImage(): Observable<string> {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working and deployed to Github. Docker virtual environment not working on Windows Home. All dependencies updated
-* To-Do: Revisit Docker
+* Status: Working. Docker virtual environment not working on Windows Home. All dependencies updated
+* To-Do: Revisit Docker - App to be deployed to Google Cloud Run using a Docker image.
 
 ## :clap: Inspiration
 
