@@ -13,7 +13,7 @@
       <button mat-raised-button color="primary">LIKE</button>
       <button mat-raised-button color="success">SHARE</button>
       <div fxFlex></div>
-      <p class="credit-para">
+      <p class="credit-para" *ngIf="nasaImgObj.copyright">
         <mat-icon color="accent">photo_camera</mat-icon
         >{{ nasaImgObj.copyright }}
       </p>
