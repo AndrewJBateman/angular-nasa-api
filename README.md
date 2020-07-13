@@ -68,7 +68,7 @@ getNasaImage(): Observable<string> {
 ## :clipboard: Status & To-Do List
 
 * Status: Working. Docker virtual environment not working on Windows Home. All dependencies updated
-* To-Do: Revisit Docker - App to be deployed to Google Cloud Run using a Docker image.
+* To-Do: add video playing method. Add user date select. Try gcloud Docker - App to be deployed to Google Cloud Run using a Docker image.
 
 ## :clap: Inspiration
 
