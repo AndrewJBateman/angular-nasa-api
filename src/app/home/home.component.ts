@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.nasaApi.getNasaImage().subscribe((response) => {
       this.nasaImgObj = response;
-      console.log(response);
+      console.log("NASA API response", response);
     });
   }
 }

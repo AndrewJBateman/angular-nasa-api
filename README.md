@@ -1,6 +1,6 @@
 # :zap: Angular NASA API
 
-* App using Angular 10, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started). Uses Angular Material Card to display image with buttons and credit text below.
+* App using Angular 11, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started). Uses Angular Material Card to display image with buttons and credit text below.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -12,7 +12,6 @@
   * [:camera: Screenshots](#camera-screenshots)
   * [:signal_strength: Technologies](#signal_strength-technologies)
   * [:floppy_disk: App Setup](#floppy_disk-app-setup)
-  * [:floppy_disk: Docker Setup](#floppy_disk-docker-setup)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
@@ -23,27 +22,24 @@
 
 * The NASA Picture of the Day is displayed.
 * [NASA apod API github repo](https://github.com/nasa/apod-api)
+* This was originally intended to be run on Google Cloud Run in a Docker container but this was not possible with my Windows 10 Home OS, even with a virtual terminal.
 
 ## :camera: Screenshots
 
-![Example screenshot](./img/pod.png).
+![Example screenshot](./img/nasa.png).
 ![Example screenshot](./img/saturn.png).
 
 ## :signal_strength: Technologies
 
-* [Angular v10](https://angular.io/)
+* [Angular v11](https://angular.io/)
+* [Angular Material v11](https://material.angular.io/)
 * [RxJS Library v6](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
-* [Angular Material v10](https://material.angular.io/)
 
 ## :floppy_disk: App Setup
 
 * Install dependencies with `npm i`
-* Get yourself a [NASA API key](https://api.nasa.gov/index.html#getting-started) from Nasa and add it to your environment config files
+* Get yourself a [NASA API key](https://api.nasa.gov/index.html#getting-started) from Nasa and add it to your environment config. files
 * Run `ng serve` for a dev server and navigate to `http://localhost:4200/`. The app does automatically reload if you change any of the source files
-
-## :floppy_disk: Docker Setup
-
-* For Docker to be able to be used on Windows 10 Home I had to install an Oracle VirtualBox virtual machine
 
 ## :computer: Code Examples
 
@@ -67,13 +63,12 @@ getNasaImage(): Observable<string> {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working. Docker virtual environment not working on Windows Home. All dependencies updated
+* Status: Working.
 * To-Do: add video playing method. Add user date select. Try gcloud Docker - App to be deployed to Google Cloud Run using a Docker image.
 
 ## :clap: Inspiration
 
-* NASA :-)
-* Mercury :-)
+* [NASA - use of their API](https://api.nasa.gov/)
 * [How to run Docker on Windows 10 Home edition](https://www.freecodecamp.org/news/how-to-run-docker-on-windows-10-home-edition/)
 * [Docker for windows 10 home](https://www.youtube.com/watch?v=Gtid21ZOqpM)
 
