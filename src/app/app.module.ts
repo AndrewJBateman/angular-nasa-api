@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { SafePipeModule } from "safe-pipe";
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +20,8 @@ import { SharedModule } from './shared/shared.module';
 		AppRoutingModule,
 		HttpClientModule,
 		BrowserAnimationsModule,
-		SharedModule.forRoot()
+		SharedModule.forRoot(),
+    SafePipeModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 # :zap: Angular NASA API
 
-* App using Angular 11, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started). Uses Angular Material Card to display image with buttons and credit text below.
+* App using Angular 11, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started).
+* Uses Angular Material Card to display image with buttons and credit text below.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -21,8 +22,10 @@
 
 ## :books: General info
 
-* The NASA Picture of the Day is displayed.
+* NASA card shows Astronomy Picture of the Day (APOD) from the [NASA API](https://api.nasa.gov/). Note video function requires npm module [safe-pipe](https://www.npmjs.com/package/safe-pipe)
 * [NASA apod API github repo](https://github.com/nasa/apod-api)
+* [http data handling best practices](https://angular.io/guide/http) followed - e.g. use of a separate service file to get API data then use of subscription callback function in component to subscribe to Observable data. Response object type defined using an interface model. Interface passed as type parameter to the HttpClient.get() method. Transformed data passed to async pipe.
+* [RxJS take(1)](https://rxjs-dev.firebaseapp.com/api/operators/take)) used instead of map() to emit only the first count value emitted by the source Observable. Then it completes - so no need to unsubscribe to avoid memory leaks.
 * This was originally intended to be run on Google Cloud Run in a Docker container but this was not possible with my Windows 10 Home OS, even with a virtual terminal.
 
 ## :camera: Screenshots
@@ -47,14 +50,18 @@
 * `nasa.service.ts` extract: gets data from Nasa API using APIKEY supplied by them.
 
 ```typescript
-getNasaImage(): Observable<string> {
+public getNasaImage(): Observable<Apod> {
   const year = new Date().getFullYear();
   const month = new Date().getMonth() + 1;
   const day = new Date().getDate();
-  const apiKey = 'APIKEY';
-  const apodUrl = `https://api.nasa.gov/planetary/apod?date=${year}-${month}-${day}&api_key=${apiKey}&hd=true`;
-  console.log(apodUrl);
-  return this.http.get<string>(apodUrl);
+  this.apiKey = environment.NASA_KEY;
+  const apodUrl = `https://api.nasa.gov/planetary/apod?date=${year}-${month}-${day}&api_key=${this.apiKey}&hd=true`;
+  return this.http.get<Apod>(apodUrl).pipe(
+    take(1),
+    catchError((err: any) => {
+      return throwError("Problem fetching apod from NASA API, error: ", err);
+    })
+  );
 }
 ```
 
@@ -65,13 +72,15 @@ getNasaImage(): Observable<string> {
 ## :clipboard: Status & To-Do List
 
 * Status: Working.
-* To-Do: add video playing method. Add user date select. Try gcloud Docker - App to be deployed to Google Cloud Run using a Docker image.
+* To-Do: Add user date select. Try gcloud Docker - App to be deployed to Google Cloud Run using a Docker image.
 
 ## :clap: Inspiration
 
 * [NASA - use of their API](https://api.nasa.gov/)
 * [How to run Docker on Windows 10 Home edition](https://www.freecodecamp.org/news/how-to-run-docker-on-windows-10-home-edition/)
 * [Docker for windows 10 home](https://www.youtube.com/watch?v=Gtid21ZOqpM)
+* [Angular CLI behind the scenes, part one](https://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art074)
+* [Angular CLI Behind the Scenes, Part two](https://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art075)
 
 ## :file_folder: License
 
