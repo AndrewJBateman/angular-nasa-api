@@ -5,18 +5,40 @@
       <mat-card-title>{{ nasaImgObj.title }}</mat-card-title>
       <mat-card-subtitle>{{ nasaImgObj.date | date }}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="nasaImgObj.hdurl" [alt]="" />
-    <mat-card-content>
-      <p>{{ nasaImgObj.explanation }}</p>
-    </mat-card-content>
-    <mat-card-actions align="end" class="bottom-buttons">
-      <button mat-raised-button color="primary">LIKE</button>
-      <button mat-raised-button color="success">SHARE</button>
-      <div fxFlex></div>
-      <p class="credit-para" *ngIf="nasaImgObj.copyright">
-        <mat-icon color="accent">photo_camera</mat-icon
-        >{{ nasaImgObj.copyright }}
-      </p>
-    </mat-card-actions>
+    <mat-card-body>
+      <!-- Show image if the media_type = image -->
+      <img
+        class="card-img-top"
+        [src]="nasaImgObj.hdurl"
+        alt="Card image"
+        *ngIf="nasaImgObj.media_type === 'image'"
+      />
+
+      <div id="video" *ngIf="nasaImgObj.media_type === 'video'">
+        <!-- Display and embed the YouTube video if the media_type is set to video -->
+        <iframe
+          *ngIf="nasaImgObj.media_type === 'video'"
+          [src]="nasaImgObj.url | safe: 'resourceUrl'"
+          width="560"
+          height="315"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- <img mat-card-image [src]="nasaImgObj.hdurl" [alt]="Card - image" /> -->
+      <mat-card-content>
+        <p>{{ nasaImgObj.explanation }}</p>
+      </mat-card-content>
+      <mat-card-actions align="end" class="bottom-buttons">
+        <button mat-raised-button color="primary">LIKE</button>
+        <button mat-raised-button color="success">SHARE</button>
+        <div fxFlex></div>
+        <p class="credit-para" *ngIf="nasaImgObj.copyright">
+          <mat-icon color="accent">photo_camera</mat-icon
+          >{{ nasaImgObj.copyright }}
+        </p>
+      </mat-card-actions>
+    </mat-card-body>
   </mat-card>
 </div>
