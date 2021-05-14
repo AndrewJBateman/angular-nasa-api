@@ -42,6 +42,7 @@
 * [Angular v12](https://angular.io/)
 * [Angular Material v12](https://material.angular.io/)
 * [RxJS Library v6](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
+* [Mode module @angular/flex-layout](https://www.npmjs.com/package/@angular/flex-layout) provides a layout API using Flexbox CSS + mediaQuery. Still at v11.0.0-beta.33 as of may 2021 [see github repo](https://github.com/angular/flex-layout).
 
 ## :floppy_disk: App Setup
 
@@ -75,7 +76,7 @@ public getNasaImage(): Observable<Apod> {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working.
+* Status: Working. Note: rxjs v6 used - possible incompatibility issues with latest v7.
 * To-Do: Add user date select. Try gcloud Docker - App to be deployed to Google Cloud Run using a Docker image.
 
 ## :clap: Inspiration
