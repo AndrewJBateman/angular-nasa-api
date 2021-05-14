@@ -1,9 +1,13 @@
 # :zap: Angular NASA API
 
-* App using Angular 11, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started).
+* App using Angular 12, to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started).
 * Uses Angular Material Card to display image with buttons and credit text below.
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-*** Note: to open web links in a new window use: _ctrl+click on link_**
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-nasa-api?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-nasa-api?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-nasa-api?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-nasa-api?style=plastic)
 
 ## :page_facing_up: Table of contents
 
