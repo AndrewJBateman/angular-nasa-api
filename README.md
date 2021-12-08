@@ -47,7 +47,7 @@
 ## :floppy_disk: App Setup
 
 * Install dependencies with `npm i`
-* Get yourself a [NASA API key](https://api.nasa.gov/index.html#getting-started) from Nasa and add it to your environment config. files
+* Get yourself a [NASA API key](https://api.nasa.gov/index.html#getting-started) from Nasa and add it to your environment config. files `environments/environment.ts` & `environments/environment.prod.ts`
 * Run `ng serve` for a dev server and navigate to `http://localhost:4200/`. The app does automatically reload if you change any of the source files
 
 ## :computer: Code Examples
