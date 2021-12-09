@@ -23,7 +23,7 @@ export class NasaService {
     return this.http.get<Apod>(apodUrl).pipe(
       take(1),
       catchError((err: any) => {
-        return throwError("Problem fetching apod from NASA API, error: ", err);
+        return throwError(() => err);
       })
     );
   }
