@@ -1,6 +1,6 @@
 # :zap: Angular NASA API
 
-* App using Angular to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started).
+* App using the Angular JS framework & RxJS reactive programming to view data from the official [NASA API](https://api.nasa.gov/index.html#getting-started).
 * Uses an Angular Material Card to display image with buttons and credit text below.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
@@ -41,8 +41,8 @@
 
 * [Angular v13](https://angular.io/)
 * [Angular Material v13](https://material.angular.io/)
-* [RxJS Library v6](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
-* [Mode module @angular/flex-layout](https://www.npmjs.com/package/@angular/flex-layout) provides a layout API using Flexbox CSS + mediaQuery. Still at v11.0.0-beta.33 as of may 2021 [see github repo](https://github.com/angular/flex-layout).
+* [RxJS Library v7](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
+* [Mode module @angular/flex-layout](https://www.npmjs.com/package/@angular/flex-layout) provides a layout API using Flexbox CSS + mediaQuery.
 
 ## :floppy_disk: App Setup
 
@@ -64,7 +64,7 @@ public getNasaImage(): Observable<Apod> {
   return this.http.get<Apod>(apodUrl).pipe(
     take(1),
     catchError((err: any) => {
-      return throwError("Problem fetching apod from NASA API, error: ", err);
+      return throwError(() => err);
     })
   );
 }
@@ -76,14 +76,12 @@ public getNasaImage(): Observable<Apod> {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working. Note: rxjs v6 used - possible incompatibility issues with latest v7.
+* Status: Working.
 * To-Do: Add user date select. Try gcloud Docker - App to be deployed to Google Cloud Run using a Docker image.
 
 ## :clap: Inspiration
 
 * [NASA - use of their API](https://api.nasa.gov/)
-* [How to run Docker on Windows 10 Home edition](https://www.freecodecamp.org/news/how-to-run-docker-on-windows-10-home-edition/)
-* [Docker for windows 10 home](https://www.youtube.com/watch?v=Gtid21ZOqpM)
 * [Angular CLI behind the scenes, part one](https://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art074)
 * [Angular CLI Behind the Scenes, Part two](https://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art075)
 
