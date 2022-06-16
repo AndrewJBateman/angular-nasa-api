@@ -39,10 +39,10 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v13](https://angular.io/)
-* [Angular Material v13](https://material.angular.io/)
+* [Angular v14](https://angular.io/)
+* [Angular Material v14](https://material.angular.io/)
 * [RxJS Library v7](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
-* [Mode module @angular/flex-layout](https://www.npmjs.com/package/@angular/flex-layout) provides a layout API using Flexbox CSS + mediaQuery.
+* [Node module @angular/flex-layout v13](https://www.npmjs.com/package/@angular/flex-layout) provides a layout API using Flexbox CSS + mediaQuery.
 
 ## :floppy_disk: App Setup
 
