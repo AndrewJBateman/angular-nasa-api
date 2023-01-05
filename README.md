@@ -39,16 +39,17 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v14](https://angular.io/)
-* [Angular Material v14](https://material.angular.io/)
+* [Angular v15](https://angular.io/)
+* [Angular Material v15](https://material.angular.io/)
 * [RxJS Library v7](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
-* [Node module @angular/flex-layout v13](https://www.npmjs.com/package/@angular/flex-layout) provides a layout API using Flexbox CSS + mediaQuery.
+* [Node module @angular/flex-layout v14](https://www.npmjs.com/package/@angular/flex-layout) provides a layout API using Flexbox CSS + mediaQuery.
 
 ## :floppy_disk: App Setup
 
 * Install dependencies with `npm i`
 * Get yourself a [NASA API key](https://api.nasa.gov/index.html#getting-started) from Nasa and add it to your environment config. files `environments/environment.ts` & `environments/environment.prod.ts`
 * Run `ng serve` for a dev server and navigate to `http://localhost:4200/`. The app does automatically reload if you change any of the source files
+* Run `npm run build` to create a build folder
 
 ## :computer: Code Examples
 
@@ -91,4 +92,4 @@ public getNasaImage(): Observable<Apod> {
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@gmail.com
